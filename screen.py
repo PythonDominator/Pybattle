@@ -1,7 +1,7 @@
 import os
 import time
 import constants
-import textwrap
+from textwrap3 import wrap
 import win32api
 
 def clear() -> None:
@@ -14,7 +14,7 @@ def typewrite(text: str, delay: float = constants.NORMAL_DELAY_TIME, skip: bool 
     if color != None:
         propertys += color
             
-    lines = textwrap.wrap(text)
+    lines = wrap(text)
     for line in lines:
         line += '\n'
         for index, char in enumerate(line):
